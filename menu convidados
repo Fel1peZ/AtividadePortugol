@@ -1,0 +1,72 @@
+programa
+{
+	
+cadeia convidados[100]
+		cadeia nome
+	funcao inicio()
+	{
+
+	inteiro opcao = 0
+	enquanto(opcao != 4){
+		escreva("\n ++++++Menu++++++\n")
+		escreva(" 1- adicionar      \n")
+		escreva(" 2-listar         \n")
+		escreva(" 3-remover         \n")
+		escreva(" 4-sair            \n")
+		escreva(" ++++++Menu++++++\n")
+		leia(opcao)
+		 	escolha(opcao){
+		 		caso(1):
+		 			
+		 			cadastrar()
+		 		pare
+		 			
+		 		caso(2):
+		 			listar()
+		 		pare
+		 		caso(3):
+		 			escreva("\nDigite o convidado que quer remover\n")
+					leia(nome)
+		 			remover()
+		 		pare
+		 	}
+		
+		}
+	}
+
+	funcao cadastrar(){
+		para(inteiro i=0;i < 100; i++){
+			se(convidados[i] == ""){
+				escreva("\nDigite o convidado\n")
+				leia(nome)
+				convidados[i] = nome
+				pare
+ 			}
+		}
+
+	
+	}
+
+	funcao listar(){
+		para(inteiro i=0;i < 100;i++){
+			escreva(convidados[i])
+
+			
+		}
+
+			
+	}
+
+	funcao remover(){
+	para(inteiro i=0;i < 100; i++){
+		
+		se(convidados[i] == nome){
+		
+		convidados[i] = ""
+		}
+		}
+		
+	}
+
+
+}
